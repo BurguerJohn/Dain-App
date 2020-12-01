@@ -1,0 +1,28 @@
+------------ Options -------------
+align_data: True
+batchSize: 1
+checkpoints_dir: ./checkpoints/
+dataroot: True
+display_id: 1
+display_winsize: 256
+fineSize: 256
+gpu_ids: [0, 1]
+identity: 0.0
+input_nc: 3
+isTrain: True
+loadSize: 286
+max_dataset_size: inf
+model: pix2pix
+nThreads: 2
+n_layers_D: 3
+name: test_local
+ndf: 64
+ngf: 64
+norm: instance
+output_nc: 3
+serial_batches: True
+use_dropout: True
+which_direction: AtoB
+which_model_netD: basic
+which_model_netG: unet_256
+-------------- End ----------------
