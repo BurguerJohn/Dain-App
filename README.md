@@ -28,12 +28,13 @@ You can see a few results from those Youtube videos.
 
 ### Citation
 If you find the code and datasets useful in your research, please cite:
+	
 	@article{Dain-App,
-	  title={Dain-App: Application for Video Interpolations},
-	  author={Gabriel Poetsch},
-	  year={2020}
+		title={Dain-App: Application for Video Interpolations},
+		author={Gabriel Poetsch},
+		year={2020}
 	}
-    @inproceedings{DAIN,
+	@inproceedings{DAIN,
         author    = {Bao, Wenbo and Lai, Wei-Sheng and Ma, Chao and Zhang, Xiaoyun and Gao, Zhiyong and Yang, Ming-Hsuan}, 
         title     = {Depth-Aware Video Frame Interpolation}, 
         booktitle = {IEEE Conference on Computer Vision and Pattern Recognition},
@@ -45,8 +46,7 @@ If you find the code and datasets useful in your research, please cite:
          journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
          doi={10.1109/TPAMI.2019.2941941},
          year={2018}
-    }
-	
+    }	
 
 ### Requirements and Dependencies
 - numba=0.51.2
@@ -64,7 +64,7 @@ If you find the code and datasets useful in your research, please cite:
 
 ### Installation
 Check out the Colab code:
-- TODO
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
 Remember you need to build the .cuda scripts before the app can work.
 
@@ -83,7 +83,7 @@ A example of a working code:
 Currently Dain-App training code is broken, to train new models, use the DAIN github and import the models to Dain-App
 
 ### Google Colab Demo
-- TODO
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
 ### Contact
 [Gabriel Poetsch](mailto:griskai.yt@gmail.com)
