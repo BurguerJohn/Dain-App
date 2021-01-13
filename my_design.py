@@ -108,8 +108,7 @@ class My_Ui_Dialog(Ui_Dialog):
 		super().setupUi(Dialog)
 
 		localAppData = QStandardPaths.writableLocation(QStandardPaths.AppLocalDataLocation)
-		self.prefabsFolder = os.path.join(localAppData, "dainapp", "prefabs")
-
+		self.prefabsFolder = os.path.join(localAppData, "prefabs")
 
 		self.selectFiles = ""
 		self.selectInputSeq = ""
@@ -946,6 +945,7 @@ if __name__ == "__main__":
 	else:
 		app = QtWidgets.QApplication(sys.argv)
 		app.setStyle("Fusion")
+		app.setApplicationName("dainapp")
 		Dialog = QtWidgets.QDialog()
 		ui = My_Ui_Dialog()
 		ui.setupUi(Dialog)
