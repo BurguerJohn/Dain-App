@@ -23,7 +23,7 @@ import my_imageUI
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QWidget
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtCore import Qt, QSettings
+from PyQt5.QtCore import Qt, QSettings, QStandardPaths
 from design3 import Ui_Dialog
 
 import setting
@@ -107,8 +107,8 @@ class My_Ui_Dialog(Ui_Dialog):
 	def setupUi(self, Dialog):
 		super().setupUi(Dialog)
 
-		self.prefabsFolder = os.path.join(os.getenv('LOCALAPPDATA'), "dainapp", "prefabs")
-
+		localAppData = QStandardPaths.writableLocation(QStandardPaths.AppLocalDataLocation)
+		self.prefabsFolder = os.path.join(localAppData, "prefabs")
 
 		self.selectFiles = ""
 		self.selectInputSeq = ""
@@ -227,11 +227,13 @@ class My_Ui_Dialog(Ui_Dialog):
 
 	def OnLoadPrefab(self):
 		index = self.placeholderList.currentIndex()
-		data = self.prefabList[index]
-		self.LoadPrefab(data)
+		if index >= 0:
+			data = self.prefabList[index]
+			self.LoadPrefab(data)
 
 	def OnDeletePrefab(self):
-		self.ConfirmBox("Caution", "This will remove the selected prefab, continue?", self.DeletePrefab)
+		if self.placeholderList.currentIndex() >= 0 :
+			self.ConfirmBox("Caution", "This will remove the selected prefab, continue?", self.DeletePrefab)
 
 
 	def SavePrefab(self, name = "No-Name"):
@@ -945,6 +947,7 @@ if __name__ == "__main__":
 	else:
 		app = QtWidgets.QApplication(sys.argv)
 		app.setStyle("Fusion")
+		app.setApplicationName("dainapp")
 		Dialog = QtWidgets.QDialog()
 		ui = My_Ui_Dialog()
 		ui.setupUi(Dialog)
