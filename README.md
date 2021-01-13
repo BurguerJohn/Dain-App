@@ -59,17 +59,17 @@ Check out the example Colab code:
 
 Install the requirements
 	
-	$ pip install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
+	pip install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
 	
 Build the CUDA packages
 
-	$ cd my_package 
-	$ ./build.sh
+	cd my_package 
+	./build.sh
 	
-	$ cd ../PWCNet/correlation_package_pytorch1_0
-	$ ./build.sh
+	cd ../PWCNet/correlation_package_pytorch1_0
+	./build.sh
 	
-	$ cd ../../	
+	cd ../../	
 
 ### Running application with interface
     python my_design.py
