@@ -23,7 +23,7 @@ import my_imageUI
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QWidget
 from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtCore import Qt, QSettings
+from PyQt5.QtCore import Qt, QSettings, QStandardPaths
 from design3 import Ui_Dialog
 
 import setting
@@ -107,7 +107,8 @@ class My_Ui_Dialog(Ui_Dialog):
 	def setupUi(self, Dialog):
 		super().setupUi(Dialog)
 
-		self.prefabsFolder = os.path.join(os.getenv('LOCALAPPDATA'), "dainapp", "prefabs")
+		localAppData = QStandardPaths.writableLocation(QStandardPaths.AppLocalDataLocation)
+		self.prefabsFolder = os.path.join(localAppData, "dainapp", "prefabs")
 
 
 		self.selectFiles = ""
