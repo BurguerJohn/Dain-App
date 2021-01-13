@@ -227,11 +227,13 @@ class My_Ui_Dialog(Ui_Dialog):
 
 	def OnLoadPrefab(self):
 		index = self.placeholderList.currentIndex()
-		data = self.prefabList[index]
-		self.LoadPrefab(data)
+		if index >= 0:
+			data = self.prefabList[index]
+			self.LoadPrefab(data)
 
 	def OnDeletePrefab(self):
-		self.ConfirmBox("Caution", "This will remove the selected prefab, continue?", self.DeletePrefab)
+		if self.placeholderList.currentIndex() >= 0 :
+			self.ConfirmBox("Caution", "This will remove the selected prefab, continue?", self.DeletePrefab)
 
 
 	def SavePrefab(self, name = "No-Name"):
