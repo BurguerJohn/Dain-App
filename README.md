@@ -57,11 +57,11 @@ If you find the code and datasets useful in your research, please cite:
 Check out the example Colab code:
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
-Install the requirements
+Install the requirements:
 	
 	pip install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
 	
-Build the CUDA packages
+Build the CUDA packages:
 
 	cd my_package 
 	./build.sh
