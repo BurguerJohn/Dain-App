@@ -39,4 +39,3 @@ def GetArchs():
 		return AllArch()
 	else:
 		return MyArch()
-
