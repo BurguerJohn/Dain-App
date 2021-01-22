@@ -7,7 +7,7 @@ This is the source code for the video interpolation application **Dain-App**, de
 ### Table of Contents
 1. [Introduction](#introduction)
 1. [Citation](#citation)
-1. [Requirements and Dependencies](#requirements-and-dependencies)
+1. [Prerequisites](#prerequisites)
 1. [Installation](#installation)
 1. [Running application with interface](#running-application-with-interface)
 1. [Running application with command line](#running-application-with-command-line) 
@@ -48,25 +48,28 @@ If you find the code and datasets useful in your research, please cite:
          year={2018}
     }	
 
-### Requirements and Dependencies
-- numba=0.51.2
-- numpy=1.19.2
-- opencv-python=4.4.0.46
-- pillow=8.0.1
-- pyqt5=5.15.1
-- python=3.8.5
-- scikit-learn=0.23.2
-- scipy=1.5.4
-- torch=1.7.0+cu110
-- torchvision=0.8.1+cu110
-- tqdm=4.51.0
+### Prerequisites
+- Python 3.8.5
+- CUDA 11
 - ffmpeg
 
 ### Installation
-Check out the Colab code:
+Check out the example Colab code:
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
-Remember you need to build the .cuda scripts before the app can work.
+Install the requirements:
+	
+	pip install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
+	
+Build the CUDA packages:
+
+	cd my_package 
+	./build.sh
+	
+	cd ../PWCNet/correlation_package_pytorch1_0
+	./build.sh
+	
+	cd ../../	
 
 ### Running application with interface
     python my_design.py
@@ -80,7 +83,7 @@ A example of a working code:
     python  my_design.py -cli --input "gif/example.gif" -o "example_folder/" -on "interpolated.gif" -m "model_weights/best.pth" -fh 3 --interpolations 2 --depth_awarenes 0 --loop 0 -p 0 --alpha 0 --check_scene_change 10 --png_compress 0 --crf 1 --pixel_upscale_downscale_before 1 --pixel_downscale_upscale_after 1 --pixel_upscale_after 1 --mute_ffmpeg 1 --split_size_x -1 --split_size_y -1 --split_pad 150 --half 0 --step_extract 1 --step_interpolate 1 --batch_size 1 --use_benchmark 0 --force_flow 1 --smooth_flow 0 --downscale -1 --fast_mode 0
 
 ### Training New Models
-Currently Dain-App training code is broken, to train new models, use the DAIN github and import the models to Dain-App
+Currently Dain-App training code is broken, to train new models, use the [DAIN](https://github.com/baowenbo/DAIN) github and import the models to Dain-App
 
 ### Google Colab Demo
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
