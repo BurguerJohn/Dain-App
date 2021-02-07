@@ -110,7 +110,8 @@ class My_Ui_Dialog(Ui_Dialog):
 		appData = os.getenv('LOCALAPPDATA')
 		if not appData:
 			appData = os.path.join(os.path.dirname(__file__), "appData")
-			os.makedirs(appData)
+			if not os.path.exists(appData):
+				os.makedirs(appData)
 		self.prefabsFolder = os.path.join(appData, "dainapp", "prefabs")
 
 
