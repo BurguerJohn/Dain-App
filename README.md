@@ -64,7 +64,7 @@ If you find the code and datasets useful in your research, please cite:
 
 ### Installation
 Check out the Colab code:
-[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/HeylonNHP/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
 Remember you need to build the .cuda scripts before the app can work.
 
@@ -83,10 +83,10 @@ A example of a working code:
 Currently Dain-App training code is broken, to train new models, use the DAIN github and import the models to Dain-App
 
 ### Google Colab Demo
-[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/HeylonNHP/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
 ### Contact
 [Gabriel Poetsch](mailto:griskai.yt@gmail.com)
 
 ### License
-See [MIT License](https://github.com/BurguerJohn/Dain-App/blob/master/LICENSE)
+See [MIT License](https://github.com/HeylonNHP/Dain-App/blob/master/LICENSE)
