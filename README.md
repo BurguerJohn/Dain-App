@@ -63,10 +63,11 @@ If you find the code and datasets useful in your research, please cite:
 - ffmpeg
 
 ### Installation
-If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has tested on Ubuntu 18.04. 
+If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has tested on Ubuntu 18.04 and Arch Linux. 
     
     conda create --name DAIN-APP --file requirements.txt
     conda activate DAIN-APP
+    pip install 'opencv-contrib-python==4.4.0.46'
 
 Some tips:  
 - Install pyqt5 by pip may cause crash issue. If you meet this error:
@@ -94,7 +95,11 @@ Remember you need to build the below scripts before the app can work. Please ref
     $ ./build.sh
 
 ### Running application with interface
-    python my_design.py
+    $ python my_design.py
+
+    Or run the script to automatically initialize conda and start the GUI
+
+    $ ./GUI.sh
 
 ### Running application with command line
 You can see all commands for CLI using this code:
