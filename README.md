@@ -85,7 +85,7 @@ try to install pyqt by conda instead.
 Check out the Colab code:
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/HeylonNHP/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
-Remember you need to build the below scripts before the app can work. Please refer `Installation` of [DAIN](https://github.com/baowenbo/DAIN) README Doc. 
+The, run the script below while inside Dain-App dir to compile the remaining modules. For more details, please refer `Installation` of [DAIN](https://github.com/baowenbo/DAIN) README Doc. 
     
     $ ./build-app.sh
 
