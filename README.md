@@ -63,10 +63,35 @@ If you find the code and datasets useful in your research, please cite:
 - ffmpeg
 
 ### Installation
-Check out the Colab code:
-[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
+If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has tested on Ubuntu 18.04. 
+    
+    conda create --name DAIN-APP --file requirements.txt
+    conda activate DAIN-APP
 
-Remember you need to build the .cuda scripts before the app can work.
+Some tips:  
+- Install pyqt5 by pip may cause crash issue. If you meet this error:
+    
+    QObject::moveToThread: Current thread (0x55c1b72bc630) is not the object's thread (0x55c1b72f1eb0).
+    Cannot move to target thread (0x55c1b72bc630)
+
+
+try to install pyqt by conda instead.
+    
+    pip uninstall pyqt5
+    pip uninstall pyqt5-sip
+    conda install pyqt
+
+Check out the Colab code:
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/HeylonNHP/Dain-App/blob/master/Dain_App_Colab.ipynb)
+
+Remember you need to build the below scripts before the app can work. Please refer `Installation` of [DAIN](https://github.com/baowenbo/DAIN) README Doc. 
+    
+    $ cd Dain-App
+    $ cd my_package 
+    $ ./build.sh
+
+    $ cd ../PWCNet/correlation_package_pytorch1_0
+    $ ./build.sh
 
 ### Running application with interface
     python my_design.py
@@ -83,10 +108,10 @@ A example of a working code:
 Currently Dain-App training code is broken, to train new models, use the DAIN github and import the models to Dain-App
 
 ### Google Colab Demo
-[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/BurguerJohn/Dain-App/blob/master/Dain_App_Colab.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/HeylonNHP/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
 ### Contact
 [Gabriel Poetsch](mailto:griskai.yt@gmail.com)
 
 ### License
-See [MIT License](https://github.com/BurguerJohn/Dain-App/blob/master/LICENSE)
+See [MIT License](https://github.com/HeylonNHP/Dain-App/blob/master/LICENSE)

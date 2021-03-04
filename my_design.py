@@ -107,7 +107,12 @@ class My_Ui_Dialog(Ui_Dialog):
 	def setupUi(self, Dialog):
 		super().setupUi(Dialog)
 
-		self.prefabsFolder = os.path.join(os.getenv('LOCALAPPDATA'), "dainapp", "prefabs")
+		appData = os.getenv('LOCALAPPDATA')
+		if not appData:
+			appData = os.path.join(os.path.dirname(__file__), "appData")
+			if not os.path.exists(appData):
+				os.makedirs(appData)
+		self.prefabsFolder = os.path.join(appData, "dainapp", "prefabs")
 
 
 		self.selectFiles = ""
