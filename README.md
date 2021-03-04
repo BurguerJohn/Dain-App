@@ -63,7 +63,7 @@ If you find the code and datasets useful in your research, please cite:
 - ffmpeg
 
 ### Installation
-If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has tested on Ubuntu 18.04 and Arch Linux. 
+If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has been tested on Ubuntu 18.04 and Arch Linux. 
     
     conda create --name DAIN-APP --file requirements.txt
     conda activate DAIN-APP
@@ -87,12 +87,7 @@ Check out the Colab code:
 
 Remember you need to build the below scripts before the app can work. Please refer `Installation` of [DAIN](https://github.com/baowenbo/DAIN) README Doc. 
     
-    $ cd Dain-App
-    $ cd my_package 
-    $ ./build.sh
-
-    $ cd ../PWCNet/correlation_package_pytorch1_0
-    $ ./build.sh
+    $ ./build-app.sh
 
 ### Running application with interface
     $ python my_design.py
