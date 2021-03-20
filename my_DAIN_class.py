@@ -248,7 +248,8 @@ class DainClass():
     
     filename = self.mainFolder + "/resume.txt"
     if not os.path.exists(filename):
-      return 0
+      blank = {"index": 0 , "counter": 0}
+      return blank
     myfile = open(filename, 'r')
     data = myfile.read()
     myfile.close()
