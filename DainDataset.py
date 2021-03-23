@@ -21,7 +21,7 @@ class DainDataset(data.Dataset):
       if diffScenes > -1:
         skip_interpolation = psnr.IsDiffScenes(my_list[i], my_list[i + 1], diffScenes)
         if skip_interpolation:
-          print("Scene detection between frames {} and {}".format(i ,i+1))
+          print("Scene detection between frames {} and {}".format(i+1 ,i+2)) # Frame filenames start at 1 not 0 hence the offset
           continue
       self.combos.append({"f1": my_list[i], "f2": my_list[i + 1], "i" : -1})
 
