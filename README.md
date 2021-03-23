@@ -63,10 +63,11 @@ If you find the code and datasets useful in your research, please cite:
 - ffmpeg
 
 ### Installation
-If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has tested on Ubuntu 18.04. 
+If you use Linux. You'd better use conda env. The environment by [requirements.txt](requirements.txt) has been tested on Ubuntu 18.04 and Arch Linux. 
     
     conda create --name DAIN-APP --file requirements.txt
     conda activate DAIN-APP
+    pip install 'opencv-contrib-python==4.4.0.46'
 
 Some tips:  
 - Install pyqt5 by pip may cause crash issue. If you meet this error:
@@ -84,17 +85,16 @@ try to install pyqt by conda instead.
 Check out the Colab code:
 [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/HeylonNHP/Dain-App/blob/master/Dain_App_Colab.ipynb)
 
-Remember you need to build the below scripts before the app can work. Please refer `Installation` of [DAIN](https://github.com/baowenbo/DAIN) README Doc. 
+Then, run the script below while inside Dain-App dir to compile the remaining modules. For more details, please refer `Installation` of [DAIN](https://github.com/baowenbo/DAIN) README Doc. 
     
-    $ cd Dain-App
-    $ cd my_package 
-    $ ./build.sh
-
-    $ cd ../PWCNet/correlation_package_pytorch1_0
-    $ ./build.sh
+    $ ./build-app.sh
 
 ### Running application with interface
-    python my_design.py
+    $ python my_design.py
+
+    Or run the script to automatically initialize conda and start the GUI
+
+    $ ./GUI.sh
 
 ### Running application with command line
 You can see all commands for CLI using this code:
